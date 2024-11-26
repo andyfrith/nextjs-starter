@@ -21,19 +21,6 @@ export default function AppNavbar() {
     { label: "Profile", href: "/profile" },
   ];
 
-  // const menuItems = [
-  //   "Profile",
-  //   "Dashboard",
-  //   "Activity",
-  //   "Analytics",
-  //   "System",
-  //   "Deployments",
-  //   "My Settings",
-  //   "Team Settings",
-  //   "Help & Feedback",
-  //   "Log Out",
-  // ];
-
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
