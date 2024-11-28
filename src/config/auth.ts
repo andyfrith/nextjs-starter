@@ -1,8 +1,11 @@
+import { DrizzleAdapter } from "@auth/drizzle-adapter";
 import { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+import db from "@/db";
 import { env } from "@/env/server";
 
 const options: NextAuthOptions = {
+  adapter: DrizzleAdapter(db),
   pages: {
     signIn: "/",
   },
