@@ -9,6 +9,12 @@ const options: NextAuthOptions = {
   pages: {
     signIn: "/",
   },
+  callbacks: {
+    session({ session, user }) {
+      session.user.id = user.id;
+      return session;
+    },
+  },
   providers: [
     GoogleProvider({
       clientId: env.GOOGLE_CLIENT_ID,

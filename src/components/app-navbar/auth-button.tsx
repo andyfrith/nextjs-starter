@@ -26,7 +26,12 @@ export default function AuthButton({ minimal = false }: { minimal?: boolean }) {
   if (status === "authenticated") {
     if (minimal) {
       return (
-        <Button onClick={signOutClickHandler} color="danger" variant="ghost">
+        <Button
+          onClick={signOutClickHandler}
+          color="danger"
+          variant="ghost"
+          aria-label="Sign In"
+        >
           <IconBrandGoogle />
           Sign Out
         </Button>
@@ -62,7 +67,12 @@ export default function AuthButton({ minimal = false }: { minimal?: boolean }) {
   }
 
   return (
-    <Button onClick={() => signIn("google")} color="danger" variant="ghost">
+    <Button
+      onClick={() => signIn("google")}
+      color="danger"
+      variant="ghost"
+      aria-label="Sign In"
+    >
       <IconBrandGoogle />
       Sign In
     </Button>
